@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
               else if (wordMeaningDataModel != null)
                 Expanded(child: _buildResponseWidget())
               else
-                _noDataWidget("Welcome, Start Searching")
+                _noDataWidget("Welcome\nStart Learning New Words")
             ],
           ),
         ),
@@ -186,10 +186,12 @@ class _HomePageState extends State<HomePage> {
 
   Widget _noDataWidget(String text) {
     return SizedBox(
+      width: double.infinity,
       height: 100,
       child: Center(
         child: Text(
           text,
+          textAlign: TextAlign.center,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.grey,
